@@ -28,7 +28,7 @@ A simple web application that automatically generates exam seating arrangements 
 
 ## Live Demo
 
-https://exam-seating-arrangement-system.onrender.com
+https://exam-seat-hitubhau-in.onrender.com
 
 > Replace the above link with your actual Render deployment URL.
 
