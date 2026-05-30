@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seating Preview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>✅ Seating Generated</h1>
+
+    <div class="downloads">
+
+        <a class="btn" href="/download/excel">
+            Download Excel
+        </a>
+
+        <a class="btn" href="/download/pdf">
+            Download PDF
+        </a>
+
+    </div>
+
+    <h2>Preview (First 50 Records)</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Room</th>
+                <th>Seat</th>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Branch</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for row in data %}
+
+        <tr>
+            <td>{{ row["Room"] }}</td>
+            <td>{{ row["Seat"] }}</td>
+            <td>{{ row["Roll No"] }}</td>
+            <td>{{ row["Name"] }}</td>
+            <td>{{ row["Branch"] }}</td>
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <a class="btn" href="/">
+        Generate Again
+    </a>
+
+</div>
+
+</body>
+</html>

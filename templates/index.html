@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Seating System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📚 Exam Seating Arrangement System</h1>
+
+    <form action="/generate" method="POST" enctype="multipart/form-data">
+
+        <div class="card">
+            <label>Students Excel File</label>
+            <input type="file" name="students_file" accept=".xlsx,.xls" required>
+        </div>
+
+        <div class="card">
+            <label>Rooms Excel File</label>
+            <input type="file" name="rooms_file" accept=".xlsx,.xls" required>
+        </div>
+
+        <button type="submit">
+            Generate Seating
+        </button>
+
+    </form>
+
+    <div class="note">
+        <h3>Required Students Columns</h3>
+        <ul>
+            <li>Roll No</li>
+            <li>Name</li>
+            <li>Branch</li>
+        </ul>
+
+        <h3>Required Rooms Columns</h3>
+        <ul>
+            <li>Room No</li>
+            <li>Rows</li>
+            <li>Columns</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
